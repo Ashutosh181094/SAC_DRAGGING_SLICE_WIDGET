@@ -187,7 +187,7 @@ am4core.useTheme(am4themes_animated);
 var data=[{
     "country": "Dummy",
     "disabled": true,
-    "litres": 1000,
+    "value": 1000,
     "color": am4core.color("#dadada"),
     "opacity": 0.3,
     "strokeDasharray": "4,4"
@@ -254,7 +254,7 @@ chart1.innerRadius = am4core.percent(40);
 chart1.zIndex = 1;
 
 var series1 = chart1.series.push(new am4charts.PieSeries());
-series1.dataFields.value = "litres";
+series1.dataFields.value = "value";
 series1.dataFields.category = "country";
 series1.colors.step = 2;
 series1.alignLabels = false;
@@ -317,7 +317,7 @@ chart2.innerRadius = am4core.percent(40);
 chart2.zIndex = 1;
 
 var series2 = chart2.series.push(new am4charts.PieSeries());
-series2.dataFields.value = "litres";
+series2.dataFields.value = "value";
 series2.dataFields.category = "country";
 series2.colors.step = 2;
 
