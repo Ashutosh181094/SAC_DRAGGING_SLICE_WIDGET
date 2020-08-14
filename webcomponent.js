@@ -184,7 +184,7 @@ height:500px;
        
 am4core.useTheme(am4themes_animated);
 // Themes end
-var datab=[{
+var data=[{
     "country": "Dummy",
     "disabled": true,
     "litres": 1000,
@@ -196,14 +196,14 @@ var datab=[{
 //var arValues=[12,12,14,15];
 for(var i=0;i<this.countries.length;i++)
 {
-datab.push(
+data.push(
 {
 "country":this.countries[i],
 "value":this.grossValue[i]
 });
 }
-console.log(datab);
-
+console.log(data);
+/*
 var data = [{
     "country": "Dummy",
     "disabled": true,
@@ -230,7 +230,7 @@ var data = [{
     "country": "Austria",
     "litres": 128.3
 }];
-
+*/
 
 // cointainer to hold both charts
 var container = am4core.create(myChart, am4core.Container);
