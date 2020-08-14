@@ -64,7 +64,10 @@ height:500px;
       console.log("step-4");
 		   let shadowRoot = this.attachShadow({mode: "open"});
 		   shadowRoot.appendChild(template.content.cloneNode(true));
-       this._firstConnection = false;
+                   this._firstConnection = false;
+	           this.countries=new Array();
+	           this.grossValue=new Array();
+           
            
            
         
@@ -153,12 +156,20 @@ height:500px;
         */
          
 
-         get chartType() {
-            return this.chartTypeValue;
+         get Countries() {
+            return this.countries;
         }
 
-        set chartType(value) {
-            this.chartTypeValue = value;
+        set Countries(value) {
+            this.countries = value;
+        }
+	 
+	 get grossMargin() {
+            return this.grossValue;
+        }
+
+        set grossMargin(value) {
+            this.grossValue = value;
         }
         
      
@@ -173,6 +184,25 @@ height:500px;
        
 am4core.useTheme(am4themes_animated);
 // Themes end
+var datab=[{
+    "country": "Dummy",
+    "disabled": true,
+    "litres": 1000,
+    "color": am4core.color("#dadada"),
+    "opacity": 0.3,
+    "strokeDasharray": "4,4"
+}];
+//var arCountries=["India","Australia","America","Pakistan"];
+//var arValues=[12,12,14,15];
+for(var i=0;i<this.countries.length;i++)
+{
+datab.push(
+{
+"country":this.countries[i],
+"value":this.grossValue[i]
+});
+}
+console.log(datab);
 
 var data = [{
     "country": "Dummy",
